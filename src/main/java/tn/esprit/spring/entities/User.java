@@ -23,7 +23,10 @@ public class User implements Serializable {
 	//modif 1 pour git
 	
 	// modif 2 pour branch
+	
+	//changes in git stst
 
+	
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long id;   
