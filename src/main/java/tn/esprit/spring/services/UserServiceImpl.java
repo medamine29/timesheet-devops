@@ -39,33 +39,38 @@ public class UserServiceImpl implements IUserService {
 
 	@Override
 	public User addUser(User u) {
-		// TODO Log à ajouter en début de la méthode 
-		User u_saved = userRepository.save(u); 
-		// TODO Log à ajouter à la fin de la méthode 
-		return u_saved; 
+		l.info("entering method addUser"); 
+		User uSaved = userRepository.save(u); 
+		l.info("exiting method addUser"); 
+		return uSaved; 
 	}
 
 	@Override 
 	public User updateUser(User u) { 
-		// TODO Log à ajouter en début de la méthode 
-		User u_saved = userRepository.save(u); 
-		// TODO Log à ajouter à la fin de la méthode 
-		return u_saved; 
+		l.info("entering method updateUser"); 
+		User uSaved = userRepository.save(u); 
+		l.info("exiting method updateUser"); 
+		return uSaved; 
 	}
 
 	@Override
 	public void deleteUser(String id) {
-		// TODO Log à ajouter en début de la méthode 
+		l.info("entering method deleteUser"); 
 		userRepository.deleteById(Long.parseLong(id)); 
-		// TODO Log à ajouter à la fin de la méthode 
+		l.info("exiting method deleteUser"); 
 	}
 
 	@Override
 	public User retrieveUser(String id) {
-		// TODO Log à ajouter en début de la méthode 
+		l.info("entering method retrieveUser"); 
 		//User u =  userRepository.findById(Long.parseLong(id)).orElse(null);
-		User u =  userRepository.findById(Long.parseLong(id)).get(); 
-		// TODO Log à ajouter à la fin de la méthode 
+		User u = null;
+		try {
+			u =  userRepository.findById(Long.parseLong(id)).get(); 
+		} catch (Exception e) {
+			l.info("exception :",e); 
+		}
+		l.info("exiting method retrieveUser"); 
 		return u; 
 	}
 

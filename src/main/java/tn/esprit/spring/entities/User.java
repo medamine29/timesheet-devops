@@ -24,11 +24,11 @@ public class User implements Serializable {
 	
 	// modif 2 pour branch
 	
-	//changes in git stst
+	//changes in git sts
 
 	
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	//@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long id;   
 	
 	//@Column(name="USR_FIRST_NAME", length=20, unique=true, nullable=false)
