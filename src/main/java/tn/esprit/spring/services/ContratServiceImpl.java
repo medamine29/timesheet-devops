@@ -90,7 +90,6 @@ public class ContratServiceImpl implements IContratService {
 		return contratRetrieved;
 	}
 	
-	
 	@Override
 	public void deleteContrat(String id) {
 

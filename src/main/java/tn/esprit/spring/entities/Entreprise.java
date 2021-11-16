@@ -15,6 +15,8 @@ import javax.persistence.OneToMany;
 @Entity
 public class Entreprise implements Serializable{
 	
+	//banjour
+	
 	/**
 	 * 
 	 */
